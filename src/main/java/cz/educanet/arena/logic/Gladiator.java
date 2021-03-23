@@ -20,10 +20,7 @@ public class Gladiator {
      * @return true if hp is <= 0, else false
      */
     public boolean isDead() {
-        if (currentHP == 0) {
-            return true;
-        }
-        throw new UnsupportedOperationException();
+        return currentHP <= 0;
     }
 
     /**
@@ -34,6 +31,8 @@ public class Gladiator {
     public void dealDamage(Gladiator enemy) {
         Random ran = new Random();
         setDMG(ran.nextInt(minDMG) + maxDMG);
+        enemy.setCurrentHP(enemy.getCurrentHP()-DMG);
+
     }
 
     public String getName() {
@@ -55,6 +54,7 @@ public class Gladiator {
     }
     public void setMaxHP(int maxHP) {
         this.maxHP = maxHP;
+        this.currentHP = maxHP;
     }
 
     public int getDMG() {
