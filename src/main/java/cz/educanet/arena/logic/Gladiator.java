@@ -32,7 +32,6 @@ public class Gladiator {
         Random ran = new Random();
         setDMG(ran.nextInt(minDMG) + maxDMG);
         enemy.setCurrentHP(enemy.getCurrentHP()-DMG);
-
     }
 
     public String getName() {
@@ -62,5 +61,19 @@ public class Gladiator {
     }
     public void setDMG(int DMG) {
         this.DMG = DMG;
+    }
+
+    public int getMaxDMG(){
+        return maxDMG;
+    }
+    public void setMaxDMG(int maxDMG) {
+        this.maxDMG = maxDMG;
+    }
+
+    public int getMinDMG() {
+        return minDMG;
+    }
+    public void setMinDMG(int minDMG) {
+        this.minDMG = minDMG;
     }
 }

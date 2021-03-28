@@ -17,11 +17,9 @@ public class Arena {
      * Makes the gladiators fight one round.
      */
     public void fight() {
-        // TODO:
-        // Gladiator 1 should deal (random) damage to Gladiator 2
-        // Gladiator 2 should deal (random) damage to Gladiator 1
         gladiator1.dealDamage(gladiator2);
         gladiator2.dealDamage(gladiator1);
+        round++;
     }
 
     /**
